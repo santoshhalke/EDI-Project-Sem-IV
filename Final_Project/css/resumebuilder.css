@@ -1,0 +1,43 @@
+html{
+    font-family: 'Source Serif 4', serif;
+}
+
+.myimage{
+
+    /* border: 1px solid ; */
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background{
+    background-color: aqua;
+}
+
+.heading{
+    /* background-image: url(resume4.png);
+    background-repeat: no-repeat; */
+    /* color: white; */
+    /* padding: 3px; */
+    text-align: center;
+    
+}
+
+
+.test
+{
+    position: relative;
+}
+
+#generatecvdivcontainer{
+    /* display: inline-block; */
+    position: absolute;
+    bottom: 5%;
+    left:33%;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+}
+
+.col-md-6 {
+    margin-bottom: 40px;
+}

@@ -1,0 +1,113 @@
+*{
+    margin:0px;
+    padding:0px;
+    text-decoration:none;
+}
+body{
+    background-image:url( ../images/logo2.jpeg);
+     background-size:610px 800px;
+     background-repeat: no-repeat;
+     cursor: pointer;
+     height:100vh;
+     background-position:cover;
+}
+h1{
+    /* border:2px solid red; */
+    width:500px;
+    margin-left:830px;
+    text-align:center;
+    margin-top:50px;
+    margin-bottom:100px;
+    color:blue;
+}
+.container{
+    /* border:2px solid red; */
+    width:55%;
+    margin-left:700px;
+    text-align:left;
+    height:400px;
+    /* border:2px solid red; */
+}
+.container input{
+    border:none;
+    outline: none;
+    border-bottom:4px solid black;
+    width:400px;
+    /* background-color: bisque; */
+    display: inline-block;
+    margin-bottom:40px ;
+}
+.container label{
+    font-size:1.6rem;
+    color:rgb(71, 71, 226);
+}
+.email{
+    margin-left:12px;
+}
+.pass{
+    margin-left:28px;
+}
+.container input.cre{
+    border:2px solid blue;
+    border-radius:20px;
+    width:250px;
+    height:40px;
+    margin-left:250px;
+    color:white;
+    background-color:blue;
+    font-size:22px;
+}
+placeholder{
+    border: 2px solid red;
+    text-align:center;
+    font-size:20px;
+    color:black;
+}
+li{
+    display:inline-block;
+    margin-right:100px;
+    padding:10px;
+    
+}
+ul{
+    background-color:rgb(100, 26, 219);
+    margin-top:0px;
+    height:40px;
+    text-align: right;
+    color: aliceblue;
+}
+a{
+    color:whitesmoke;
+    text-decoration:none;
+
+}
+p{
+    width: 700px;
+    margin-left:0px;
+}
+ .container input.policy{
+    float:left;
+    /* display:inline-block; */
+    /* border:8px solid red; */
+    width:2%;
+    margin-right:0px;
+    transform: scale(1.7);
+}
+.container label.term{
+    display:inline-block;
+    font-size:20px;
+    color:grey;
+    margin-right:300px;
+    /* border:2px solid red; */
+    margin-left:10px;
+    /* margin-bottom:25px; */
+}
+
+.container::after{
+    content:"";
+    display:block;
+    clear:left;
+}
+background-image{
+    height:100vh;
+}

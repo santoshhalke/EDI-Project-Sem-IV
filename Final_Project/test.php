@@ -1,0 +1,268 @@
+<?php
+require_once 'includes/connection.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/test.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <div class="container" id="container1">
+        <h1>Quiz</h1>
+        <hr>
+
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div id="question1">
+                <h2>Question 1:</h2>
+                <p>What is 2 + 2?</p>
+                <label><input type="radio" name="q1" value="3"> 3</label>
+                <label><input type="radio" name="q1" value="4"> 4</label>
+                <label><input type="radio" name="q1" value="5"> 5</label>
+                <label><input type="radio" name="q1" value="6"> 6</label>
+
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question2')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question1')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q1')">Clear My Choice</button>
+                <!-- Added clear button -->
+            </div>
+
+
+            <!-- Question 2 -->
+            <div id="question2" style="display: none;">
+                <h2>Question 2:</h2>
+                <p>What is the capital of France?</p>
+                <label><input type="radio" name="q2" value="Paris"> Paris</label>
+                <label><input type="radio" name="q2" value="London"> London</label>
+                <label><input type="radio" name="q2" value="Berlin"> Berlin</label>
+                <label><input type="radio" name="q2" value="Rome"> Rome</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question2')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question2')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q2')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div id="question3" style="display: none;">
+                <h2>Question 3:</h2>
+                <p>What is the chemical symbol for water?</p>
+                <label><input type="radio" name="q3" value="H2O"> H2O</label>
+                <label><input type="radio" name="q3" value="CO2"> CO2</label>
+                <label><input type="radio" name="q3" value="NaCl"> NaCl</label>
+                <label><input type="radio" name="q3" value="C6H12O6"> C6H12O6</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question3')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question3')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q3')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div id="question4" style="display: none;">
+                <h2>Question 4:</h2>
+                <p>Who wrote the play "Romeo and Juliet"?</p>
+                <label><input type="radio" name="q4" value="William Shakespeare"> William Shakespeare</label>
+                <label><input type="radio" name="q4" value="Jane Austen"> Jane Austen</label>
+                <label><input type="radio" name="q4" value="Charles Dickens"> Charles Dickens</label>
+                <label><input type="radio" name="q4" value="Leo Tolstoy"> Leo Tolstoy</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question4')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question4')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q4')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="question5" style="display: none;">
+                <h2>Question 5:</h2>
+                <p>What is the tallest mountain in the world?</p>
+                <label><input type="radio" name="q5" value="Mount Everest"> Mount Everest</label>
+                <label><input type="radio" name="q5" value="K2"> K2</label>
+                <label><input type="radio" name="q5" value="Kangchenjunga"> Kangchenjunga</label>
+                <label><input type="radio" name="q5" value="Makalu"> Makalu</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question5')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question5')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q5')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="question6" style="display: none;">
+                <h2>Question 6:</h2>
+                <p>What is the chemical symbol for gold?</p>
+                <label><input type="radio" name="q6" value="Au"> Au</label>
+                <label><input type="radio" name="q6" value="Ag"> Ag</label>
+                <label><input type="radio" name="q6" value="Cu"> Cu</label>
+                <label><input type="radio" name="q6" value="Fe"> Fe</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question6')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question6')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q6')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="question7" style="display: none;">
+                <h2>Question 7:</h2>
+                <p>What is the largest planet in our solar system?</p>
+                <label><input type="radio" name="q7" value="Mercury"> Mercury</label>
+                <label><input type="radio" name="q7" value="Venus"> Venus</label>
+                <label><input type="radio" name="q7" value="Earth"> Earth</label>
+                <label><input type="radio" name="q7" value="Jupiter"> Jupiter</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question7')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question7')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q7')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="question8" style="display: none;">
+                <h2>Question 8:</h2>
+                <p>Who painted the Mona Lisa?</p>
+                <label><input type="radio" name="q8" value="Leonardo da Vinci"> Leonardo da Vinci</label>
+                <label><input type="radio" name="q8" value="Pablo Picasso"> Pablo Picasso</label>
+                <label><input type="radio" name="q8" value="Vincent van Gogh"> Vincent van Gogh</label>
+                <label><input type="radio" name="q8" value="Michelangelo"> Michelangelo</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question8')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question8')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q8')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 9 -->
+            <div id="question9" style="display: none;">
+                <h2>Question 9:</h2>
+                <p>What is the chemical symbol for oxygen?</p>
+                <label><input type="radio" name="q9" value="O"> O</label>
+                <label><input type="radio" name="q9" value="H"> H</label>
+                <label><input type="radio" name="q9" value="C"> C</label>
+                <label><input type="radio" name="q9" value="He"> He</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question9')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question9')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q9')">Clear My Choice</button>
+            </div>
+
+            <!-- Question 10 -->
+            <div id="question10" style="display: none;">
+                <h2>Question 10:</h2>
+                <p>Who developed the theory of relativity?</p>
+                <label><input type="radio" name="q10" value="Isaac Newton"> Isaac Newton</label>
+                <label><input type="radio" name="q10" value="Albert Einstein"> Albert Einstein</label>
+                <label><input type="radio" name="q10" value="Stephen Hawking"> Stephen Hawking</label>
+                <label><input type="radio" name="q10" value="Galileo Galilei"> Galileo Galilei</label>
+                <button class="prev-btn" type="button" onclick="showPrevQuestion('question10')">Previous</button>
+                <button class="next-btn" type="button" onclick="showNextQuestion('question10')">Next</button>
+                <button class="clear-btn" type="button" onclick="clearChoice('q10')">Clear My Choice</button>
+            </div>
+
+            <!-- Add similar sections for remaining questions -->
+
+            <!-- Submit Button -->
+            <input type="submit" id="submitBtn" style="display: none;" value="Submit">
+        </form>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Function to show the next question
+        function showNextQuestion(currentQuestion) {
+            var nextQuestionNumber = parseInt(currentQuestion.replace('question', '')) + 1;
+            var currentQuestionDiv = document.getElementById(currentQuestion);
+            var nextQuestionDiv = document.getElementById('question' + nextQuestionNumber);
+            var result = document.getElementById('result');
+            if (nextQuestionDiv) {
+                currentQuestionDiv.style.display = 'none';
+                nextQuestionDiv.style.display = 'block';
+            } else {
+                // If there's no next question, show the submit button
+                document.getElementById('submitBtn').style.display = 'block';
+            }
+        }
+
+        // Function to show the previous question
+        function showPrevQuestion(currentQuestion) {
+            var prevQuestionNumber = parseInt(currentQuestion.replace('question', '')) - 1;
+            var currentQuestionDiv = document.getElementById(currentQuestion);
+            var prevQuestionDiv = document.getElementById('question' + prevQuestionNumber);
+            if (prevQuestionDiv) {
+                currentQuestionDiv.style.display = 'none';
+                prevQuestionDiv.style.display = 'block';
+            }
+        }
+
+        // Function to clear selected answer for a question
+        function clearChoice(question) {
+            var radios = document.getElementsByName(question);
+            for (var i = 0; i < radios.length; i++) {
+                radios[i].checked = false;
+            }
+        }
+
+        // Event listener for the form submission
+        document.getElementById('quizForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Calculate score
+            var score = 0;
+            // Define the correct answers for each question
+            var correctAnswers = {
+                q1: '4',
+                q2: 'Paris',
+                q3: 'H2O',
+                q4: 'William Shakespeare',
+                q5: 'Mount Everest',
+                q6: 'Au',
+                q7: 'Jupiter',
+                q8: 'Leonardo da Vinci',
+                q9: 'O',
+                q10: 'Albert Einstein'
+                // Add correct answers for remaining questions
+            };
+            // Loop through each question
+            for (var i = 1; i <= 10; i++) {
+                var selectedAnswer = document.querySelector('input[name="q' + i + '"]:checked');
+                // Check if an answer is selected
+                if (selectedAnswer) {
+                    // Check if the selected answer is correct
+                    if (selectedAnswer.value === correctAnswers['q' + i]) {
+                        score++;
+                    }
+                }
+            }
+            // Display score
+            alert(`Your Score is ${score} out of 10`);
+            result.innerHTML = score;
+        });
+
+        $(document).ready(function () {
+            
+            var targetNode = document.getElementById('result');
+
+            
+            var observer = new MutationObserver(function (mutationsList) {
+                
+                for (var mutation of mutationsList) {
+                    if (mutation.type === 'childList' && targetNode.innerHTML !== '') {
+
+                        var searchValue = targetNode.innerHTML;
+
+                        $.ajax({
+                            url: 'includes/testhandler.php',
+                            method: 'POST',
+                            data: { search: searchValue },
+                            success: function (response) {
+                                alert("Updated Successfully");
+                            },
+                            error: function (xhr, status, error) {
+                                console.error('Error:', error);
+                            }
+                        });
+                    }
+                }
+            });
+
+            var config = { attributes: false, childList: true, subtree: false };
+            observer.observe(targetNode, config);
+        });
+
+    </script>
+</body>
+
+</html>

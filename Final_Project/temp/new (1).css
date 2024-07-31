@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6; /* Changed background color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Increased box shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Changed title color */
+}
+
+h2 {
+    color: #333; /* Changed subheading color */
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dee2e6; /* Changed HR color */
+    margin: 20px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+label:hover{
+    transform: scaleY(1.5);
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* input[type="submit"], */
+.next-btn {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 70px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition effect */
+    font-size: 22px;
+    height: 42px;
+}
+
+input[type="submit"]:hover,
+.next-btn:hover {
+    background-color: #0056b3;
+    transform: scaleY(1.2);
+}
+
+/* #clear-btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 600px;
+    height: 30px;
+    background-color: #007bff;
+    border-collapse: collapse;
+} */
+
+#container1{
+    width: 900px;
+    height: 565px;
+}
+
+/* CSS for the Clear My Choice button */
+.clear-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 577px;
+    font-size: 20px;
+    height: 42px;
+}
+
+.clear-btn:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+    transform: scaleY(1.2);
+    
+}
+
+#submitBtn{
+    margin-top: 10px;
+    width: 577px;
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition effect */
+    font-size: 22px;
+    height: 42px;
+    
+}
+
+p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 250;
+}
+
+
+
+.prev-btn{
+    /* background-color: #0056b3;
+    width: 250px; */
+    display: block;
+    width: 250px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Added transition effect */
+    font-size: 22px;
+    height: 42px;
+}
+
+.prev-btn,
+.next-btn{
+    display: inline-block;
+}
+
+.prev-btn:hover{
+    transform: scaleY(1.2);
+}
